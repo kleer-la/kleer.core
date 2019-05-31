@@ -4,5 +4,7 @@ class Category < ActiveRecord::Base
 
   validates :name, :description, :codename, :tagline, :presence => true
   
-  scope :visible_ones, where(:visible => true)
+  scope :visible_ones, -> {
+    where(:visible => true)
+  }
 end
