@@ -1,8 +1,7 @@
 class InfluenceZone < ActiveRecord::Base
   belongs_to :country
-  default_scope order('country_id, zone_name ASC')
 
-  attr_accessor :tag_name, :zone_name, :country_id, :country
+  default_scope { order('country_id, zone_name ASC') }
 
   validates :tag_name, :country, :presence => true
 

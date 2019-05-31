@@ -31,7 +31,7 @@ class AddEuCountries < ActiveRecord::Migration[5.2]
   def up
     @eu.each {|c|
       country= Country.find_by_iso_code( c[0] )
-      InfluenceZone.create( zone_name: "",
+      InfluenceZone.create!( zone_name: "",
       tag_name: "ZI-AMS-#{c[0]} (#{c[1]})",
       country_id: country.id )
 

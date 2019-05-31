@@ -4,7 +4,7 @@ class CampaignView < ActiveRecord::Base
   belongs_to :campaign
   belongs_to :campaign_source
 
-  attr_accessor :campaign, :campaign_source, :event, :event_type, :element_viewed
+
 
   after_create do |view|
     view.campaign.touch unless view.campaign.nil?

@@ -3,7 +3,6 @@ class CrmPushTransaction < ActiveRecord::Base
 	belongs_to :event
 	belongs_to :user
 
-  	attr_accessor :event, :user
 
   	def start!(mailer= EventMailer)
   		self.event.participants.each do |participant|

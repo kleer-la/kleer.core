@@ -8,7 +8,10 @@ class Trainer < ActiveRecord::Base
   has_many :participants, :through => :events
   has_many :cotrained_participants, :through => :cotrained_events, :source => :participants
 
-  scope :kleerer, where(:is_kleerer => true)
+  #scope :kleerer, where(:is_kleerer => true)
+  scope :kleerer, -> {
+    where(:is_kleerer => true)
+  }
 
   validates :name, :presence => true
 

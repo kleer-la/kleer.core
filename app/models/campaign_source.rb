@@ -5,8 +5,6 @@ class CampaignSource < ActiveRecord::Base
   has_many :countries, through: :events, uniq: true
   has_many :participants
 
-  attr_accessor :codename
-
   def display_name
     (!self.codename.nil? && self.codename != "") ? self.codename : "n/a"
   end
