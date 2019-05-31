@@ -459,4 +459,4 @@ if (InfluenceZone.count == 0)
   InfluenceZone.create!( zone_name: '', tag_name: 'ZI-AMS-UY (Uruguay)', country: Country.find_by_iso_code( 'UY' ) )
   InfluenceZone.create!( zone_name: '', tag_name: 'ZI-AMN-US (EEUU)', country: Country.find_by_iso_code( 'US' ) )
   InfluenceZone.create!( zone_name: '', tag_name: 'ZI-AMS-VE (Venezuela)', country: Country.find_by_iso_code( 'VE' ) )
-end
+endAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
