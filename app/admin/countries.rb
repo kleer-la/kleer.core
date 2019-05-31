@@ -12,4 +12,9 @@ ActiveAdmin.register Country do
 #   permitted
 # end
 
+index do
+  column :name, sortable: :name
+  column :iso_code
+end
+
 end
