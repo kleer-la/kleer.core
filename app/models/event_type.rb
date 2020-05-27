@@ -1,6 +1,7 @@
 class EventType < ActiveRecord::Base
 
   has_and_belongs_to_many :trainers
+  accepts_nested_attributes_for :trainers
   has_and_belongs_to_many :categories
   has_many :events
   has_many :participants, :through => :events
